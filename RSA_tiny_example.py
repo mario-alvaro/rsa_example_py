@@ -9,7 +9,9 @@
 #multiplicar dos de los numeros obtenidos (p y q)=> p*q=n
 #obtener el totient => totient(n) = (p-1)*(q-1)
 #elegir e (exponente de clave pública) => numero no muy grande pero que sea coprimo con totient(n)
-#por eso se coge e como primo, para asegurar que es comprimo con totient(n) (17 por ejemplo)
+#Coprimos => no comparten divisores, excepto el 1
+#por eso se coge "e" como primo, para asegurar que es coprimo con totient(n) (17 por ejemplo)
+#(Habría que comprobar que "e" no es divisor de totient, en ese caso, se obtiene otro primo mayor hasta que no sean coprimos
 #solo queda d (exponente de clave privada) => se pasa a la función "posiblesPrivKeys" el totient y e
 #d tiene que cumplir que: d*e%totient(n) = 1 es decir, d*e dividido por el totient = algo con resto 1
 # eso significa que "d" es multiplicador modular inverso de "e"
